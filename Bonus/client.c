@@ -6,19 +6,16 @@
 /*   By: hchadili <hchadili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 15:29:53 by hchadili          #+#    #+#             */
-/*   Updated: 2024/03/08 17:27:33 by hchadili         ###   ########.fr       */
+/*   Updated: 2024/03/08 23:55:13 by hchadili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "minitalk_bonus.h"
 
 void ft_resive(int sig)
 {
 	write(1,"message sent\n",13);
+	sig = 0;
 }
 
 void decmal_to_bin(unsigned int al, int id_pd)

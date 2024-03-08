@@ -6,7 +6,7 @@
 /*   By: hchadili <hchadili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 15:29:49 by hchadili          #+#    #+#             */
-/*   Updated: 2024/03/08 21:44:25 by hchadili         ###   ########.fr       */
+/*   Updated: 2024/03/08 23:54:24 by hchadili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int decmal_to_bin(unsigned int al)
 	}
 	return x;
 }
-void	ft_print_car(int si_pid, int car, int i, int pd_change)
+void	ft_print_car(int car, int pd_change)
 {
 	static int num_bit;
 	static int check;
@@ -76,7 +76,6 @@ void sigusr_handler(int sig, siginfo_t *info, void *unsude)
 	static int pd;
 	static int	pd_change;
 	
-	
 	if (pd == 0)
 		pd = info->si_pid;
 	if (pd != info->si_pid)
@@ -91,9 +90,10 @@ void sigusr_handler(int sig, siginfo_t *info, void *unsude)
 	{
 		if(car == 0)
 			kill(info->si_pid, SIGUSR1);
-		ft_print_car(info->si_pid, car, i, pd_change);
+		ft_print_car(car, pd_change);
 		if (1 == 1) i = 0 , car = 0, pd_change = 0; 
 	}
+	unsude = NULL;
 }
 int main() 
 {
