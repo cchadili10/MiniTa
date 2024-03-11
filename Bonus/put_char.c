@@ -6,21 +6,22 @@
 /*   By: hchadili <hchadili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 17:41:56 by hchadili          #+#    #+#             */
-/*   Updated: 2024/03/08 17:43:32 by hchadili         ###   ########.fr       */
+/*   Updated: 2024/03/11 15:56:06 by hchadili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "minitalk_bonus.h"
 
-void put_char(int c)
+void	put_char(int c)
 {
-	write(1,&c,1);
+	write(1, &c, 1);
 }
 
-void put_str(int *s)
+void	put_str(int *s)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	while (s[i])
 	{
 		put_char(s[i]);
