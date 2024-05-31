@@ -18,8 +18,9 @@ The goal is to create a communication system between a client and a server. The 
 make
 ./server
 ./client [server_PID] [string_to_send]
+```
 
-##Implementation Details
+## Implementation Details
 The client converts each character of the message into 8 bits and sends them to the server one by one.
 The server receives bits and reconstructs characters to form the original message.
 Bonus Part
@@ -28,11 +29,7 @@ The server sends an acknowledgment back to the client after receiving each signa
 Testing
 The project includes a series of tests for both the mandatory and bonus parts to ensure reliability and efficiency of the communication system.
 
-Author
-[Your Name]
+## Author
+hamza chadili
 
-Acknowledgments
-Special thanks to all contributors who have provided feedback and suggestions to improve the MiniTalk project.
 
-Version
-Subject version: 42
